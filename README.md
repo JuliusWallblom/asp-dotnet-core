@@ -16,7 +16,7 @@ This project is a basic GraphQL API built with ASP.NET Core, demonstrating the u
 ## Before you start
 Make sure you configure the database connection string in `src/CustomerManagement.API/appsettings.json` & `src/CustomerManagement.API/appsettings.Development.json`. The API will automatically seed the database with mock data in development.
 
-## Getting Started=7-7
+## Getting Started
 
 ### Prerequisites
 

@@ -8,6 +8,11 @@ namespace CustomerManagement.API.GraphQL;
 
 public class Query
 {
+    /// <summary>
+    /// Retrieves a single customer by their ID.
+    /// </summary>
+    /// <param name="id">The unique identifier of the customer.</param>
+    /// <returns>The customer details.</returns>
     public async Task<IEnumerable<CustomerDto>> GetCustomers([Service] IMediator mediator)
     {
         var customers = await mediator.Send(new GetAllCustomersQuery());
@@ -19,6 +24,10 @@ public class Query
         });
     }
 
+    /// <summary>
+    /// Retrieves a list of all customers.
+    /// </summary>
+    /// <returns>A list of all customers.</returns>
     public async Task<CustomerDto> GetCustomer([Service] IMediator mediator, int id)
     {
         var customer = await mediator.Send(new GetCustomerQuery(id));

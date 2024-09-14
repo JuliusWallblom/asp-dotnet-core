@@ -42,6 +42,10 @@ artifacts/
 *.vspscc
 *.vssscc
 
+# Ignore EF Core Migrations
+**/Migrations/*
+!**/Migrations/.gitkeep
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages

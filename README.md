@@ -5,18 +5,34 @@ This project is a basic GraphQL API built with ASP.NET Core, demonstrating the u
 ## Technologies Used
 
 - ASP.NET Core
-- Entity Framework Core (with in-memory database)
+- Entity Framework Core
+- MSSQL (SQL Server)
 - GraphQL (Hot Chocolate)
 - FluentValidation
 - MediatR
-- CQRS architectural pattern (without event sourcing)
+- CQRS architectural pattern (w/o event sourcing)
 - xUnit for testing
 
-## Getting Started
+## Before you start
+Make sure you configure the database connection string in `src/CustomerManagement.API/appsettings.json` & `src/CustomerManagement.API/appsettings.Development.json`. The API will automatically seed the database with mock data in development.
+
+## Getting Started=7-7
 
 ### Prerequisites
 
 - .NET 7.0 SDK or later
+
+## Creating the initial migration
+
+```bash
+dotnet ef migrations add InitialCreate --project src/CustomerManagement.Infrastructure --startup-project src/CustomerManagement.API
+```
+
+## Running the initial migration
+
+```bash
+dotnet ef database update --project src/CustomerManagement.Infrastructure/CustomerManagement.Infrastructure.csproj
+```
 
 ### Running the API
 

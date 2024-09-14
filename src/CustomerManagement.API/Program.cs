@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<CustomerDbContext>(options =>
-    options.UseInMemoryDatabase("CustomerDb"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
@@ -41,8 +41,9 @@ builder.Services.AddSwaggerGen(c =>
 var app = builder.Build();
 
 // Initialize the database
-using (var scope = app.Services.CreateScope())
+if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
     var services = scope.ServiceProvider;
     DbInitializer.Initialize(services);
 }

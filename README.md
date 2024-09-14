@@ -46,29 +46,32 @@ dotnet test tests/CustomerManagement.Tests/CustomerManagement.Tests.csproj
 ### GraphQL Queries
 
 - **Get All Customers**:
-  ```query GetAllCustomers {
+```
+query GetAllCustomers {
   customers {
     id
     fullName
     email
   }
 }
-  ```
+```
 
 - **Get Customer by ID**:
-  ```query GetCustomer($id: Int!) {
+```
+query GetCustomer($id: Int!) {
   customer(id: $id) {
     id
     fullName
     email
   }
 }
-  ```
+```
 
 ### GraphQL Mutations
 
 - **Add Customer**:
-  ```mutation CreateCustomer($firstName: String!, $lastName: String!, $email: String!) {
+```
+mutation CreateCustomer($firstName: String!, $lastName: String!, $email: String!) {
   createCustomer(firstName: $firstName, lastName: $lastName, email: $email) {
     successful
     data {
@@ -82,7 +85,7 @@ dotnet test tests/CustomerManagement.Tests/CustomerManagement.Tests.csproj
     }
   }
 }
-  ```
+```
 
 ## API Documentation
 

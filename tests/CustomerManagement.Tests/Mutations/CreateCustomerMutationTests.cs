@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using CustomerManagement.API.CQRS.Commands;
+using CustomerManagement.API.Commands;
 using CustomerManagement.API.GraphQL;
 using CustomerManagement.Core.DTOs;
 using FluentAssertions;

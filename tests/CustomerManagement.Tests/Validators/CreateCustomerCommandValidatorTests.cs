@@ -1,4 +1,4 @@
-using CustomerManagement.API.CQRS.Commands;
+using CustomerManagement.API.Commands;
 using CustomerManagement.API.Validators;
 using FluentAssertions;
 using Xunit;

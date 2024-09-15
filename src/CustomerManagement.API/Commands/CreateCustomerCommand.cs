@@ -1,7 +1,7 @@
 using MediatR;
 using CustomerManagement.Core.DTOs;
 
-namespace CustomerManagement.API.CQRS.Commands;
+namespace CustomerManagement.API.Commands;
 
 public class CreateCustomerCommand : IRequest<CustomerDto>
 {

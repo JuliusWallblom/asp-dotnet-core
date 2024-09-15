@@ -1,5 +1,5 @@
 using FluentValidation;
-using CustomerManagement.API.CQRS.Commands;
+using CustomerManagement.API.Commands;
 
 namespace CustomerManagement.API.Validators;
 

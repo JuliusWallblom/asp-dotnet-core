@@ -31,7 +31,7 @@ dotnet ef migrations add InitialCreate --project src/CustomerManagement.Infrastr
 ## Running the initial migration
 
 ```bash
-dotnet ef database update --project src/CustomerManagement.Infrastructure/CustomerManagement.Infrastructure.csproj
+dotnet ef database update --project src/CustomerManagement.Infrastructure --startup-project src/CustomerManagement.API
 ```
 
 ### Running the API

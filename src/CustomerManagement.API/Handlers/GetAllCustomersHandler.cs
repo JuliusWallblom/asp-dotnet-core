@@ -1,9 +1,9 @@
 using MediatR;
 using CustomerManagement.Core.Entities;
 using CustomerManagement.Core.Interfaces;
-using CustomerManagement.API.CQRS.Queries;
+using CustomerManagement.API.Queries;
 
-namespace CustomerManagement.API.CQRS.Handlers;
+namespace CustomerManagement.API.Handlers;
 
 public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, IEnumerable<Customer>>
 {

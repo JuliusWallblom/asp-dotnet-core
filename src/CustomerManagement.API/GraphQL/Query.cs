@@ -1,4 +1,4 @@
-using CustomerManagement.API.CQRS.Queries;
+using CustomerManagement.API.Queries;
 using CustomerManagement.Core.DTOs;
 using CustomerManagement.Core.Entities;
 using HotChocolate;

@@ -2,10 +2,10 @@ using FluentValidation;
 using MediatR;
 using CustomerManagement.Core.Entities;
 using CustomerManagement.Core.Interfaces;
-using CustomerManagement.API.CQRS.Commands;
+using CustomerManagement.API.Commands;
 using CustomerManagement.Core.DTOs;
 
-namespace CustomerManagement.API.CQRS.Handlers;
+namespace CustomerManagement.API.Handlers;
 
 public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, CustomerDto>
 {

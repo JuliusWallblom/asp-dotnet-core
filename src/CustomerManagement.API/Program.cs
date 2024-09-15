@@ -21,6 +21,15 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreateCustomerCommandValida
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 builder.Services
+    .AddCors(options =>
+    {
+        options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+    })
     .AddGraphQLServer()
     .AddQueryType<Query>()
     .AddMutationType<Mutation>()
@@ -61,5 +70,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapGraphQL();
+
+app.UseCors("AllowAll");
 
 app.Run();
